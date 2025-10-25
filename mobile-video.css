@@ -1,0 +1,239 @@
+/* Mobile video modal styles */
+@media screen and (max-width: 768px) {
+  .video-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    z-index: 9999 !important;
+    display: none;
+  }
+
+  .video-modal.active {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+
+  /* Mobile Ebook Layout */
+  @media screen and (max-width: 768px) {
+    /* Global mobile text alignment */
+    .section-card,
+    .card,
+    .video-meta,
+    .video-info,
+    .feature-list,
+    .fancy-content,
+    .project-card,
+    .skills,
+    .stat-card,
+    .about p,
+    .hero-subtitle,
+    .hero-cta,
+    .modal-content,
+    .followers-counter,
+    .counter-wrapper,
+    .counter-label {
+      text-align: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    /* Timeline specific styles */
+    #timeline .timeline-item,
+    #timeline .timeline-item .content,
+    #timeline .timeline-item h3,
+    #timeline .timeline-item p,
+    #timeline .content h3,
+    #timeline .content p {
+      text-align: left !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      width: 100% !important;
+      padding-left: 1rem !important;
+    }
+
+    #timeline .section-header h2,
+    #timeline .section-header p {
+      text-align: center !important;
+      padding-left: 0 !important;
+    }
+
+    .feature-list {
+      padding-left: 0 !important;
+      list-style: none !important;
+    }
+
+    .feature-list li {
+      text-align: center !important;
+      margin: 0.8rem 0 !important;
+    }
+
+    .card ul {
+      list-style: none !important;
+      padding-left: 0 !important;
+    }
+
+    .card ul li {
+      text-align: center !important;
+      margin: 0.8rem 0 !important;
+    }
+
+    .skills .chip {
+      margin: 0.3rem !important;
+    }
+
+    .ebook-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2rem !important;
+      text-align: center !important;
+    }
+
+    .ebook-preview {
+      order: -1 !important;
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      padding: 0.5rem !important;
+      margin: 0 auto !important;
+    }
+
+    .ebook-preview .book-cover {
+      width: 200px !important;
+      height: 280px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .ebook-preview .book-cover img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      border-radius: 8px !important;
+      display: block !important;
+      margin: 0 auto !important;
+    }
+
+    .fancy-card {
+      width: 100% !important;
+      margin-top: 1rem !important;
+    }
+
+    .fancy-content {
+      padding: 1.5rem !important;
+    }
+
+    .feature-list {
+      text-align: left !important;
+      padding-left: 0 !important;
+    }
+
+    .feature-list li {
+      margin: 0.8rem 0 !important;
+    }
+
+    /* Center buttons and CTAs */
+    .btn-wrapper,
+    .cta-wrapper,
+    .actions,
+    .hero-cta,
+    .project-card .btn,
+    .video-meta .btn,
+    .card .btn {
+      display: flex !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+
+    /* Center headings */
+    h1, h2, h3, h4, h5, h6,
+    .section-header,
+    .gradient-text {
+      text-align: center !important;
+    }
+
+    /* Center flex containers */
+    .grid,
+    .flex,
+    .row-layout {
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+  }
+
+  .video-modal .video-container {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+    background: transparent !important;
+  }
+
+  .video-modal .video-player {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    position: relative !important;
+    background: #000 !important;
+    margin-top: 2rem !important;
+    padding: 3px !important;
+    border-radius: 12px !important;
+    background: linear-gradient(45deg, #ff3366, #ff6b6b, #4158d0) !important;
+    box-shadow: 0 0 20px rgba(65, 88, 208, 0.3) !important;
+  }
+
+  .video-modal .video-player::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 12px !important;
+    background: linear-gradient(45deg, #ff3366, #ff6b6b, #4158d0) !important;
+    filter: blur(15px) !important;
+    opacity: 0.5 !important;
+    z-index: -1 !important;
+  }
+
+  .video-modal .video-player video {
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 1 !important;
+    background: #000 !important;
+  }
+
+  .video-modal .video-info {
+    width: 100% !important;
+    padding: 1rem 0 !important;
+    color: #fff !important;
+    margin-top: 1rem !important;
+  }
+
+  .video-modal .video-close {
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 10000 !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+}
