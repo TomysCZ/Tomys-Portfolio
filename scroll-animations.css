@@ -1,0 +1,58 @@
+/* Base animation properties with performance optimizations */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-out;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Mobile-optimized animations */
+@media (max-width: 768px) {
+  .scroll-animation {
+    transform: translateY(10px); /* Reduced movement */
+    transition-duration: 0.3s; /* Faster transitions */
+  }
+
+  .scroll-animation.fade-left,
+  .scroll-animation.fade-right {
+    transform: translateY(10px); /* Remove horizontal animations on mobile */
+  }
+
+  /* Reduced stagger delays */
+  .stagger-animation:nth-child(1) { transition-delay: 0.05s; }
+  .stagger-animation:nth-child(2) { transition-delay: 0.1s; }
+  .stagger-animation:nth-child(3) { transition-delay: 0.15s; }
+  .stagger-animation:nth-child(4) { transition-delay: 0.2s; }
+}
+
+/* Desktop animations */
+@media (min-width: 769px) {
+  .scroll-animation.fade-up {
+    transform: translateY(30px);
+  }
+
+  .scroll-animation.fade-left {
+    transform: translateX(-30px);
+  }
+
+  .scroll-animation.fade-right {
+    transform: translateX(30px);
+  }
+
+  .scroll-animation.fade-in {
+    transform: scale(0.95);
+  }
+
+  .stagger-animation:nth-child(1) { transition-delay: 0.1s; }
+  .stagger-animation:nth-child(2) { transition-delay: 0.2s; }
+  .stagger-animation:nth-child(3) { transition-delay: 0.3s; }
+  .stagger-animation:nth-child(4) { transition-delay: 0.4s; }
+}
+
+/* Optimized visible state */
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}

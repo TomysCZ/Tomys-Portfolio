@@ -1,0 +1,33 @@
+/* Email copy functionality styles */
+.copy-feedback {
+  position: absolute;
+  left: 150px; /* Adjust based on your layout */
+  bottom: 60px;
+  background: rgba(52, 211, 153, 0.9); /* Green color */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Style for the email link */
+#copy-email {
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+#copy-email:hover {
+  opacity: 0.8;
+}
+
+#copy-email:active {
+  transform: scale(0.98);
+}

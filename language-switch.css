@@ -1,0 +1,57 @@
+/* Language switcher styles */
+.lang-switch {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 1000;
+}
+
+.lang-switch:hover {
+  opacity: 1;
+}
+
+.lang-separator {
+  opacity: 0.5;
+  margin: 0 2px;
+}
+
+.lang-switch span {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.lang-switch .current-lang,
+.lang-switch .other-lang {
+  opacity: 0.7;
+}
+
+/* Active language state */
+.lang-switch span.active {
+  font-weight: 600;
+  opacity: 1;
+  background: linear-gradient(90deg, #ff6b6b, #da4749);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .lang-switch {
+    left: 16px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomy – Portfolio</title>
+  <link rel="icon" type="image/png" href="Snímek_obrazovky__27_-removebg-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="mobile-video.css" media="(max-width: 768px)">
+  <link rel="stylesheet" href="scroll-animations.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="copy-email.css">
+  <link rel="stylesheet" href="language-switch.css">
+  <script>
+    // Detect if the device might need performance optimizations
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.documentElement.classList.add('mobile-device');
+    }
+  </script>
+  <script src="translations.js"></script>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="stars-2"></div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand gradient-text">Tomáš Sunkovský</a>
+      <nav class="main-nav" aria-label="Hlavní navigace">
+        <a href="#about" class="nav-link" data-lang="nav-about">O mně</a>
+        <a href="#stats" class="nav-link" data-lang="nav-stats">Statistiky</a>
+        <a href="#skills" class="nav-link" data-lang="nav-skills">Dovednosti</a>
+        <a href="#projects" class="nav-link" data-lang="nav-projects">Projekty</a>
+        <a href="#timeline" class="nav-link" data-lang="nav-timeline">Časová osa</a>
+        <a href="#ebook" class="nav-link" data-lang="nav-ebook">E-book</a>
+        <a href="#contact" class="nav-link" data-lang="nav-contact">Kontakt</a>
+      </nav>
+      <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="lang-switch" id="langSwitch" aria-label="Změnit jazyk">
+        <span class="current-lang gradient-text active">CZ</span>
+        <span class="lang-separator">/</span>
+        <span class="other-lang">EN</span>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" hidden>
+      <a href="#about" class="nav-link" data-lang="nav-about">O mně</a>
+      <a href="#stats" class="nav-link" data-lang="nav-stats">Statistiky</a>
+      <a href="#skills" class="nav-link" data-lang="nav-skills">Dovednosti</a>
+      <a href="#projects" class="nav-link" data-lang="nav-projects">Projekty</a>
+      <a href="#timeline" class="nav-link" data-lang="nav-timeline">Časová osa</a>
+      <a href="#ebook" class="nav-link" data-lang="nav-ebook">E-book</a>
+      <a href="#contact" class="nav-link" data-lang="nav-contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title shiny-text" data-lang="hero-title">Web development &middot; Social media specialist &middot; Content Creator &middot; Video Editor</h1>
+      <p class="hero-subtitle" data-lang="hero-subtitle">Mám rád čistý design, plynulé animace a projekty, které dávají smysl. Níže najdeš pár vybraných prací a ukázky střihu.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" data-lang="btn-show-projects">Zobrazit projekty</a>
+        <a href="#about" class="btn btn-ghost" data-lang="btn-more-about">Více o mně</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="stats">
+    <div class="container stats-grid">
+      <div class="stat-card scroll-animation stagger-animation fade-up">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="5">0</div>
+        </div>
+        <div class="label" data-lang="years-content">Roků tvorby obsahu</div>
+      </div>
+      <div class="stat-card scroll-animation stagger-animation fade-up">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="600">0</div>
+          <span class="stat-plus">+</span>
+        </div>
+        <div class="label" data-lang="posts-created">Vytvořených příspěvků</div>
+      </div>
+      <div class="stat-card scroll-animation stagger-animation fade-up">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="100">0</div>
+          <span class="stat-plus">+</span>
+        </div>
+        <div class="label" data-lang="reach-stats">Statisícových dosahů</div>
+      </div>
+      <div class="stat-card scroll-animation stagger-animation fade-up">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="1">0</div>
+          <span class="stat-plus">+</span>
+        </div>
+        <div class="label" data-lang="years-dev">Roky s Web Development</div>
+      </div>
+    </div>
+  </section>
+
+  <main id="content" class="container">
+    <section id="about" class="section-card">
+      <header class="section-header">
+        <h2 class="gradient-text" data-lang="about-title">O mně · Content Creation + Web Development</h2>
+        <p data-lang="about-desc">Jsem tvůrce obsahu, webů a videí zaměřený na jednoduchost, detail a plynulý uživatelský zážitek.</p>
+        <div class="followers-counter">
+          <div class="counter-wrapper">
+            <span class="front-plus gradient-text invisible">+</span>
+            <span class="counter gradient-text" data-target="100">0</span>
+            <span class="gradient-text">K</span>
+          </div>
+          <div class="counter-label" data-lang="followers-social">Sledujících na sociálních sítích</div>
+        </div>
+      </header>
+
+      <div class="grid two">
+        <div class="card scroll-animation fade-left">
+          <h3 data-lang="hello-intro">Zdravím, jmenuji se Tomáš Sunkovský</h3>
+          <p data-lang="about-me-text">Navrhuji, upravuji a stavím malé moderní weby, hlavně se starám o web design čili Frontend, rád si hraji s animacemi v CSS/JS. Také jsem tvůrce videí především na platformě TikTok kde mám přes 100K sledujících. S tím souvisí i moje dovednosti v oblasti střihu a postprodukce, pracuji v programu DaVinci Resolve.</p>
+          <div class="skills scroll-animation fade-in" style="margin-top:10px">
+            <span class="chip stagger-animation">Front‑end</span>
+            <span class="chip stagger-animation">Editing</span>
+            <span class="chip stagger-animation">Content</span>
+            <span class="chip stagger-animation">DaVinci Resolve</span>
+          </div>
+        </div>
+
+        <div class="card scroll-animation fade-right">
+          <h3 data-lang="content-platforms-title">Obsah & platformy</h3>
+          <p data-lang="content-platforms-desc">Tvořím krátká videa a mikroposty pro zvýšení dosahu a zapamatovatelnosti.</p>
+          <ul>
+            <li class="scroll-animation stagger-animation fade-right" data-lang="platforms-detail">Platformy: nejvíce se pohybuji na soc. síti TikTok</li>
+            <li class="scroll-animation stagger-animation fade-right" data-lang="content-detail">Obsah: tvořím krátká videa a mikroposty pro zábavu</li>
+            <li class="scroll-animation stagger-animation fade-right" data-lang="experience-detail">Zkušenosti: Znalost algoritmů pro doporučování obsahu, takže ti rád pomohu s tvým růstem kanálu a obsahu</li>
+          </ul>
+          <div style="text-align: right">
+            <a href="#projects" class="btn btn-primary small scroll-animation fade-in" data-lang="check-projects">Mrkni na projekty</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-card">
+      <header class="section-header">
+        <h2 class="gradient-text" data-lang="skills-title">Dovednosti</h2>
+        <p data-lang="skills-desc">Technologie a nástroje, ve kterých se orientuji.</p>
+      </header>
+
+      <div class="grid two">
+        <div class="card scroll-animation fade-left">
+          <h3 data-lang="frontend-title">Frontend</h3>
+          <div class="bar scroll-animation stagger-animation fade-right"><span style="--val:90%" data-lang="web-design">Web Design · 90%</span></div>
+          <div class="bar scroll-animation stagger-animation fade-right"><span style="--val:70%" data-lang="html-css">HTML / CSS · 70%</span></div>
+          <div class="bar scroll-animation stagger-animation fade-right"><span style="--val:50%" data-lang="javascript">JavaScript · 50%</span></div>
+        </div>
+        <div class="card scroll-animation fade-right">
+          <h3 data-lang="other-skills">Ostatní - Tvorba obsahu</h3>
+          <div class="bar scroll-animation stagger-animation fade-left"><span style="--val:95%" data-lang="content-algo">Content / Algoritmus · 95%</span></div>
+          <div class="bar scroll-animation stagger-animation fade-left"><span style="--val:80%" data-lang="video-editing">Střih videí · 80%</span></div>
+          <div class="bar scroll-animation stagger-animation fade-left"><span style="--val:65%" data-lang="ai">AI · 65%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-card">
+      <header class="section-header">
+        <h2 class="gradient-text" data-lang="projects-title">Projekty</h2>
+        <p data-lang="projects-desc">Výběr mých dokončených projektů -></p>
+      </header>
+
+      <div class="skills">
+        <span class="chip" data-lang="skill-frontend">Frontend</span>
+        <span class="chip" data-lang="skill-content">Tvorba obsahu</span>
+        <span class="chip" data-lang="skill-apps">Aplikace</span>
+        <span class="chip" data-lang="skill-html">HTML</span>
+      </div>
+
+      <div class="projects row-layout">
+        <article class="project-card">
+          <div class="project-media shimmer tiktok-preview" aria-hidden="true">
+            <div class="tiktok-overlay">
+              <span class="follower-count">100K+</span>
+            </div>
+          </div>
+          <h3 data-lang="tiktok-creator">Tiktok tvůrce obsahu</h3>
+          <p data-lang="tiktok-desc">Tvorba virálního obsahu a budování komunity</p>
+          <button class="btn btn-primary small" data-open-demo="project1" data-lang="my-journey">Moje cesta</button>
+        </article>
+
+        <!-- Project 1 Modal -->
+        <div class="modal-overlay" id="project1Overlay"></div>
+        <div id="project1Modal" class="modal">
+          <div class="modal-content">
+            <button class="modal-close" aria-label="Zavřít">&times;</button>
+            <div class="modal-grid">
+              <!-- Main Content -->
+              <div class="modal-panel panel-left">
+                <div class="panel-content">
+                  <h2 class="gradient-text">TikTok Influencer</h2>
+                  <div class="project-stats">
+                    <div class="stat-item scroll-animation fade-up">
+                      <span class="stat-value gradient-text">100K+</span>
+                      <span class="stat-label" data-lang="followers">Sledujících</span>
+                    </div>
+                    <div class="stat-item scroll-animation fade-up">
+                      <span class="stat-value gradient-text">600+</span>
+                      <span class="stat-label" data-lang="videos">Videí</span>
+                    </div>
+                    <div class="stat-item scroll-animation fade-up">
+                      <span class="stat-value gradient-text">3.2M+</span>
+                      <span class="stat-label" data-lang="likes">Lajků</span>
+                    </div>
+                  </div>
+                  <div class="modal-image">
+                    <div class="image-grid">
+                      <div class="profile-showcase scroll-animation fade-in">
+                        <img src="profile.png" alt="Tomy TikTok Profile" class="profile-preview">
+                        <div class="profile-overlay">
+                          <div class="profile-stats">
+                            <div class="profile-stat">
+                              <span class="stat-icon">❤️</span>
+                              <span class="stat-number">3,2M</span>
+                            </div>
+                            <div class="profile-stat">
+                              <span class="stat-icon">👥</span>
+                              <span class="stat-number">100K+</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="workflow-preview">
+                        <div class="workflow-step scroll-animation stagger-animation fade-right">
+                          <span class="step-number">1</span>
+                          <span class="step-name" data-lang="step1">Vymysli</span>
+                        </div>
+                        <div class="workflow-step scroll-animation stagger-animation fade-right">
+                          <span class="step-number">2</span>
+                          <span class="step-name" data-lang="step2">Sestříhej</span>
+                        </div>
+                        <div class="workflow-step scroll-animation stagger-animation fade-right">
+                          <span class="step-number">3</span>
+                          <span class="step-name" data-lang="step3">Postni video</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-section">
+                    <h3 data-lang="how-simple">Jak jednoduché to je..</h3>
+                    <div class="tech-stack">
+                      <div class="tech-item">
+                        <h4 data-lang="video-topics">Témata videí</h4>
+                        <div class="skills">
+                          <span class="chip" data-lang="funny-videos">Vtipná videa</span>
+                          <span class="chip" data-lang="relatable-videos">Relatable videa</span>
+                          <span class="chip" data-lang="factual-videos">Faktická videa</span>
+                        </div>
+                      </div>
+                      <div class="tech-item">
+                        <h4>Post-processing</h4>
+                        <div class="skills">
+                          <span class="chip">Color Grading</span>
+                          <span class="chip">Visual Effects</span>
+                          <span class="chip">Motion Design</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Right Panel -->
+              <div class="modal-panel panel-right">
+                <div class="panel-content">
+                  <div class="text-section features-list">
+                    <h3 data-lang="about-career">O mé kariéře</h3>
+                    <p data-lang="career-desc-1">
+                      Během své kariéry jsem vyvinul vlastní efektivní workflow pro rychlou tvorbu a distribuci obsahu. Zaměřuji se na rychlý a krátký obsah, což mi umožňuje udržovat konzistentní kvalitu při vysoké produktivitě. Moje kariéra začla již v roce 2020, kdy jsem vydal své první video, které se stalo virálním. Vytvořil jsem si přidávání obsahu a strategického plánování příspěvků, který je podpořený analytickými nástroji pro sledování metrik a vyhodnocování úspěšnosti.
+                    </p>
+                    <p data-lang="career-desc-2">
+                      Specializuji se na tvorbu virálního obsahu a maximalizaci engagement rate. Díky neustálému sledování trendů a implementaci nových formátů je lehké udržet obsah relevantní a atraktivní pro cílové publikum. Moje zkušenosti zahrnují komplexní obsahovou strategii, community management a hluboké porozumění algoritmům sociálních sítí.
+                  </div>
+
+                  <!-- TikTok Section -->
+                  <div class="tiktok-section">
+                    <h3 data-lang="view-profile">Prohlédnout si profil</h3>
+                    <p data-lang="check-tiktok">Podívej se na můj profil na TikToku</p>
+                    <a href="https://www.tiktok.com/@tomy.officiall" target="_blank" class="btn btn-tiktok">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                      </svg>
+                      <span data-lang="view-profile-btn">Zobrazit profil</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="project-card">
+          <div class="project-media shimmer" aria-hidden="true">
+            <div class="development-badge" data-lang="in-development">Ve vývoji</div>
+          </div>
+          <h3 data-lang="mobile-app">Mobilní aplikace</h3>
+          <p data-lang="mobile-app-desc">Moderní aplikace s důrazem na uživatelskou přívětivost a výkon.</p>
+          <button class="btn btn-primary small" data-lang="open-demo" data-open-demo disabled>Otevřít ukázku</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section-card">
+      <header class="section-header">
+        <h2 class="gradient-text" data-lang="timeline-title">Časová osa</h2>
+        <p data-lang="timeline-desc">Krátký přehled mé kariéry.</p>
+      </header>
+
+      <div class="timeline">
+        <div class="timeline-item scroll-animation fade-left">
+          <div class="dot scroll-animation fade-in"></div>
+          <div class="content">
+            <h3><span class="animated-year">xxxx</span> · <span data-lang="study">Studium</span></h3>
+          </div>
+        </div>
+        <div class="timeline-item scroll-animation fade-left">
+          <div class="dot scroll-animation fade-in"></div>
+          <div class="content">
+            <h3>2024 · <span data-lang="school-current">Střední průmyslová škola dopravní - Motol</span></h3>
+            <p class="scroll-animation fade-right" data-lang="it-specialization">Informační technologie</p>
+          </div>
+        </div>
+        <div class="timeline-item scroll-animation fade-left">
+          <div class="dot scroll-animation fade-in"></div>
+          <div class="content">
+            <h3>2015 - 2024 · <span data-lang="school-previous">Základní škola Vratislavova</span></h3>
+            <p class="scroll-animation fade-right" data-lang="completed">Absolvováno &#10003;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="editing" class="section-card">
+      <header class="section-header">
+        <h2 class="gradient-text" data-lang="editing-title">Stříhání / Reel · DaVinci Resolve</h2>
+        <p data-lang="editing-desc">Čisté formáty s důrazem na tempo, přechody, beaty a čitelné titulky.</p>
+      </header>
+
+      <div class="grid two">
+        <div class="card video-card scroll-animation fade-left">
+          <div class="video-thumb scroll-animation fade-in" aria-label="Ukázkové video">
+            <img src="screenshot_1760780490206.png" alt="Short form promo thumbnail">
+          </div>
+          <div class="video-meta">
+            <h3 data-lang="short-edit">Krátký edit videohry</h3>
+            <button class="btn btn-ghost scroll-animation fade-up" onclick="openVideoModal()" data-lang="play-demo">Přehrát ukázku</button>
+          </div>
+        </div>
+        <div class="card video-card scroll-animation fade-right">
+          <div class="video-thumb scroll-animation fade-in" aria-label="Ukázkové video">
+            <img src="Red Black Modern Occult Halloween YouTube Thumbnail.png" alt="Příklad Reels videí thumbnail">
+          </div>
+          <div class="video-meta">
+            <h3 data-lang="reels-example">Příklad Reels videí</h3>
+            <button class="btn btn-ghost scroll-animation fade-up" onclick="openVideoModal2()" data-lang="play-demo">Přehrát ukázku</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ebook" class="section-card content-flow">
+      <header class="section-header text-center">
+        <h2 class="gradient-text" data-lang="ebook-title">E-book: Uspěj na sociálních sítích!</h2>
+        <p data-lang="ebook-subtitle">Průvodce tvorbou virálního obsahu na sociálních sítích</p>
+      </header>
+
+      <div class="ebook-container">
+        <div class="ebook-grid">
+          <div class="card fancy-card">
+            <div class="fancy-content">
+              <div class="fancy-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32">
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+              </div>
+              <h3 data-lang="inside-book">Co najdeš uvnitř:</h3>
+              <ul class="feature-list">
+                <li data-lang="book-feature-1">✦ Kompletní průvodce TikTokem</li>
+                <li data-lang="book-feature-2">✦ Tipy pro tvorbu virálního obsahu</li>
+                <li data-lang="book-feature-3">✦ Strategie růstu sledujících</li>
+                <li data-lang="book-feature-4">✦ Techniky pro monetizaci obsahu</li>
+                <li data-lang="book-feature-5">✦ Marketing a personal branding</li>
+              </ul>
+            </div>
+            <div class="fancy-shape"></div>
+          </div>
+          <div class="card ebook-preview fancy-card">
+            <div class="book-card">
+              <div class="book-cover">
+                <img src="75jhhvaz6q834vgycm197vvlmjnr.png" alt="Social Media eBook Cover">
+              </div>
+            </div>
+            <div class="fancy-shape"></div>
+          </div>
+        </div>
+        <div class="cta-wrapper">
+          <a href="https://tomyofficiall.gumroad.com/l/nkmmd" class="btn btn-primary download-btn" target="_blank" rel="noopener">
+            <span class="btn-text" data-lang="download">Stáhnout</span>
+            <span class="check-mark">✓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-card">
+      <header class="section-header">
+        <h2 class="gradient-text" data-lang="contact-title">Kontakt</h2>
+        <p data-lang="contact-desc">Chceš se se mnou spojit? – ozvu se co nejdříve.</p>
+      </header>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="form grid two" id="contact-form">
+        <input type="hidden" name="access_key" value="a5636fc0-929c-4175-a885-dbae2908063c">
+        <input type="hidden" name="subject" value="Nová zpráva z webu">
+        <input type="hidden" name="from_name" value="Kontaktní formulář">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <label>
+          <span data-lang="name">Jméno</span>
+          <input type="text" name="name" data-lang-placeholder="name-placeholder" placeholder="Tvé jméno" required minlength="2" maxlength="50">
+        </label>
+        <label>
+          <span data-lang="email">Email</span>
+          <input type="email" name="email" data-lang-placeholder="email-placeholder" placeholder="Zadej svůj email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </label>
+        <label style="grid-column:1/-1">
+          <span data-lang="message">Zpráva</span>
+          <textarea name="message" rows="5" data-lang-placeholder="message-placeholder" placeholder="Zdravím..." required minlength="10"></textarea>
+        </label>
+        <div class="actions" style="grid-column:1/-1; display: flex; align-items: center; gap: 15px;">
+          <button type="submit" class="btn btn-primary" id="submit-btn" data-lang="send">Odeslat</button>
+          <div id="result" style="display:none; font-weight: bold;"></div>
+        </div>
+      </form>
+
+      <script>
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('result');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Odesílám...';
+
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form)
+            });
+            
+            const data = await response.json();
+            
+            if (response.status === 200) {
+              result.innerHTML = '<div class="gradient-text">Zpráva byla úspěšně odeslána!</div>';
+              form.reset();
+            } else {
+              result.innerHTML = '<div style="color: red;">Došlo k chybě. Zkuste to prosím znovu.</div>';
+            }
+          } catch (error) {
+            result.innerHTML = '<div style="color: red;">Došlo k chybě. Zkuste to prosím znovu.</div>';
+          }
+
+          result.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Odeslat';
+        });
+      </script>
+    </section>
+  </main>
+
+  <div class="pre-footer">
+    <div class="container">
+      <div class="cv-wrapper">
+        <a href="Tomáš Sunkovský.pdf" download class="cv-download-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span data-lang="download-cv">Stáhnout mé CV</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact">
+        <h3 class="gradient-text" data-lang="stay-in-touch">Zůstaňme v kontaktu</h3>
+        <p><span data-lang="email">Email:</span> <a href="mailto:tom.sunkov@gmail.com" class="link" id="copy-email" data-clipboard="tom.sunkov@gmail.com">tom.sunkov@gmail.com</a></p>
+        <span id="copy-feedback" class="copy-feedback" data-lang="copy-email">✓ Zkopírováno!</span>
+      </div>
+      <div class="socials" aria-label="Sociální sítě">
+        <!-- TikTok -->
+        <a class="icon" href="https://www.tiktok.com/@tomy.officiall?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M21 8.5c-2.3-.5-4.2-1.9-5.3-3.8V17a6.5 6.5 0 1 1-6.5-6.5c.3 0 .6 0 .9.1V13a3.5 3.5 0 1 0 3.5 3.5V2h3.2c.6 2.3 2.5 4.1 4.8 4.7V8.5z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a class="icon" href="https://www.instagram.com/tomyss.s/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        </a>
+        <!-- GitHub -->
+        <a class="icon" href="https://github.com/TomysCZ" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="rights" data-lang="rights">Všechna práva jsou vyhrazena.</div>
+  </footer>
+
+  <div id="scroll-progress"></div>
+  <button id="backToTop" aria-label="Zpět nahoru" data-lang="back-to-top">↑</button>
+  <div id="toast" data-lang="message-sent">Zpráva odeslána – děkuji!</div>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-container">
+      <div class="video-player">
+        <video controls>
+          <source src="Me Jalo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-info">
+        <h3 class="gradient-text" data-lang="edit-demo">Ukázka mého editu</h3>
+        <p data-lang="edit-desc">Zde je ukázka mé práce ve střihu a postprodukci. Využívám DaVinci Resolve pro profesionální zpracování videa, včetně color gradingu a efektů. Věnuji se také motion designu a vizuálním efektům. Jsem velmi precizní a detailní ve své práci. Toto byl příklad zpracování videohry.</p>
+        <p data-lang="you-can-see">V této ukázce můžeš vidět:</p>
+        <ul>
+          <li data-lang="feature-transitions">Dynamické přechody</li>
+          <li data-lang="feature-color">Barevné korekce</li>
+          <li data-lang="feature-sound">Zvukovou postprodukci</li>
+          <li data-lang="feature-motion">Motion design</li>
+          <li data-lang="feature-effects">Vizuální efekty</li>
+          <li data-lang="feature-text">Textové efekty</li>
+        </ul>
+      </div>
+      <button class="video-close" onclick="event.preventDefault(); closeVideoModal()">&times;</button>
+    </div>
+  </div>
+
+  <!-- Second Video Modal -->
+  <div id="videoModal2" class="video-modal">
+    <div class="video-container">
+      <div class="video-player">
+        <video controls>
+          <source src="bodycam.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-info">
+        <h3 class="gradient-text" data-lang="reels-title">Příklad Reels videí</h3>
+        <p data-lang="reels-desc">Další ukázka mé práce s videem, tentokrát se zaměřením na Reels formát. Tento styl editace je optimalizován pro sociální sítě a krátký formát obsahu.</p>
+        <p data-lang="reels-features">V této ukázce můžeš vidět:</p>
+        <ul>
+          <li data-lang="feature-vertical">Vertikální formát pro sociální sítě</li>
+          <li data-lang="feature-dynamic">Rychlý a dynamický střih</li>
+          <li data-lang="feature-transitions-modern">Moderní přechody</li>
+          <li data-lang="feature-music">Práce s hudbou a rytmem</li>
+          <li data-lang="feature-color-grading">Efektní color grading</li>
+          <li data-lang="feature-mobile">Optimalizace pro mobilní zobrazení</li>
+        </ul>
+      </div>
+      <button class="video-close" onclick="event.preventDefault(); closeVideoModal2()">&times;</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script>
+    // Check if device is mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // Optimized Scroll Animation Observer
+    const scrollAnimationObserver = new IntersectionObserver((entries) => {
+      // Process entries in batches using requestAnimationFrame
+      requestAnimationFrame(() => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Unobserve after animation to free up resources
+            if (!entry.target.classList.contains('counter')) {
+              scrollAnimationObserver.unobserve(entry.target);
+            }
+          }
+        });
+      });
+    }, {
+      // Reduced threshold and larger rootMargin for better mobile performance
+      threshold: isMobile ? 0.1 : 0.15,
+      rootMargin: '50px 0px -30px 0px'
+    });
+
+    // Observe all elements with scroll-animation class
+    document.querySelectorAll('.scroll-animation').forEach(element => {
+      scrollAnimationObserver.observe(element);
+    });
+
+    function openVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.add('active');
+      const video = modal.querySelector('video');
+      video.play();
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const video = modal.querySelector('video');
+      video.pause();
+      modal.classList.remove('active');
+      return false;
+    }
+
+    function openVideoModal2() {
+      const modal = document.getElementById('videoModal2');
+      modal.classList.add('active');
+      const video = modal.querySelector('video');
+      video.play();
+    }
+
+    function closeVideoModal2() {
+      const modal = document.getElementById('videoModal2');
+      const video = modal.querySelector('video');
+      video.pause();
+      modal.classList.remove('active');
+      return false;
+    }
+
+    // Close modals when clicking outside the video container
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        e.preventDefault();
+        closeVideoModal();
+      }
+    });
+
+    document.getElementById('videoModal2').addEventListener('click', function(e) {
+      if (e.target === this) {
+        e.preventDefault();
+        closeVideoModal2();
+      }
+    });
+  </script>
+</body>
+</html>
+
